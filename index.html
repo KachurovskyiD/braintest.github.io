@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Main page</title>
+  <style>
+   .content-wrap {
+      margin: 50px 100px;
+    }
+    body {
+      font-family: Roboto, sans-serif;
+    }
+    table {
+      border: 1px solid #666666;
+      text-align: center;
+    }
+    caption {
+      text-transform: uppercase;
+    }
+    * {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrap">
+
+    <h1>It's a first page</h1>
+    
+    <nav>
+      <b>Menu</b>
+      <ul>
+        <li><a href="page.html">My Page</a></li>
+        <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+      </ul>
+    </nav>
+    
+    <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. </b><i>Reiciendis voluptates consequuntur eius
+        aspernatur, cupiditate velit pariatur!</i> Nostrum unde est ex iusto? Perferendis omnis possimus soluta.</p>
+    <hr>
+    <p><u>Lorem ipsum dolor sit amet consectetur adipisicing elit. </u><s>Reiciendis voluptates consequuntur eius
+        aspernatur, cupiditate velit pariatur!</s> Nostrum unde est ex iusto? Perferendis omnis possimus soluta.</p>
+    <hr>
+    
+    <img src="https://cdn.pixabay.com/photo/2017/11/06/09/53/animal-2923186_960_720.jpg" alt="Lion" height="400px"
+      width="400px">
+    
+    <table>
+      <caption>Tags list</caption>
+      <thead>
+        <tr>
+          <th>Tag name</th>
+          <th>Description</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;input&gt;</td>
+          <td>многофункциональные поля формы</td>
+          <td>inline-block</td>
+        </tr>
+        <tr>
+          <td>&lt;form&gt;</td>
+          <td>html-форма</td>
+          <td>block</td>
+        </tr>
+        <tr>
+          <td>&lt;div&gt;</td>
+          <td>контейнер для разделов html-документа, группирует блочные элементы</td>
+          <td>block</td>
+        </tr>
+        <tr>
+          <td>&lt;span&gt;</td>
+          <td>контейнер для строчных элементов</td>
+          <td>inline</td>
+        </tr>
+        <tr>
+          <td>&lt;img&gt;</td>
+          <td>html-изображения</td>
+          <td>inline</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="select-list">
+      <label for="list">Выберите курс</label>
+      <select id="list">
+        <option>Back-end</option>
+        <option selected>Front-end</option>
+        <option>Python</option>
+        <option>Php</option>
+        <option>Java</option>
+      </select>
+    </div>
+  </div>
+</body>
+</html>
