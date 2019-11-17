@@ -1,0 +1,135 @@
+*,
+*:focus,
+*:active,
+*:visited {
+  box-sizing: border-box;
+  font-family: 'Heebo', sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background: url('http://leadconsultoria.com/wp-content/uploads/2017/08/bg-gray.jpg') no-repeat;
+  background-size: cover;
+  color: #a0a0a0;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: medium;
+  color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+  &-fb {
+    background-color: #3E67A5;
+  }
+  &-acc {
+    background-color: transparent;
+    color: #bebebe;
+    border: 1px solid #bebebe;
+    margin-bottom: -1px;
+    padding: 10px 10px;
+    width: 150px;
+    &:hover {
+      background-color: #bebebe;
+      color: #fff;
+    }
+  }
+  &-login {
+    background-color: #82CCB5;
+    min-width: 160px;
+  }
+  &-close {
+    position: relative;
+    top: 35px;
+    right: -200px;
+    height: 15px;
+    width: 15px;
+    border: none;
+    background: url('https://image.flaticon.com/icons/svg/32/32178.svg');
+    background-size: cover;
+    ;
+  }
+}
+.decoration {
+  color: #000;
+  font-style: italic;
+}
+.decoration::before,
+.decoration::after {
+  content: '-';
+  padding: 5px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    border: 1px solid #bebebe;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    .icon {
+      max-height: 100px;
+    }
+  }
+  &_content {
+    width: 80%;
+    background-color: #fff;
+    border-radius: 6px;
+    max-width: 450px;
+    min-height: 600px;
+    padding-top: 120px;
+    text-align: center;
+  }
+  &__account {
+    border-bottom: 1px solid #bebebe;
+    width: 90%;
+    margin: 0 auto;
+    
+  }
+  &-label {
+    color: rgb(133, 133, 134);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+    align-self: flex-start;
+    padding-left: 68px;
+  }
+  &-input {
+    width: 70%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+  }
+  &-forgot {
+    margin: 15px auto 30px;
+    font-size: 12px;
+    position: relative;
+    right: -110px;
+    text-decoration: underline;
+    color: #bebebe;
+    font-weight: bold;
+
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
