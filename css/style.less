@@ -11,125 +11,65 @@
 body {
   background: url('http://leadconsultoria.com/wp-content/uploads/2017/08/bg-gray.jpg') no-repeat;
   background-size: cover;
-  color: #a0a0a0;
-}
-
-.btn {
-  text-transform: uppercase;
-  font-weight: medium;
   color: #fff;
-  padding: 15px;
-  border-radius: 3px;
-  border: none;
-  &-fb {
-    background-color: #3E67A5;
-  }
-  &-acc {
-    background-color: transparent;
-    color: #bebebe;
-    border: 1px solid #bebebe;
-    margin-bottom: -1px;
-    padding: 10px 10px;
-    width: 150px;
-    &:hover {
-      background-color: #bebebe;
-      color: #fff;
-    }
-  }
-  &-login {
-    background-color: #82CCB5;
-    min-width: 160px;
-  }
-  &-close {
-    position: relative;
-    top: 35px;
-    right: -200px;
-    height: 15px;
-    width: 15px;
-    border: none;
-    background: url('https://image.flaticon.com/icons/svg/32/32178.svg');
-    background-size: cover;
-    ;
-  }
 }
-.decoration {
-  color: #000;
-  font-style: italic;
+
+.btn, input {
+  min-width: 130px;
+  background-image: linear-gradient(to top, rgb(63, 64, 77), rgba(59, 59, 73, 0.99), rgba(55, 54, 70, 0.98), rgba(51, 48, 66, 0.96), rgba(47, 43, 63, 0.95), rgba(43, 38, 59, 0.94), rgba(38, 34, 52, 0.95), rgba(33, 30, 44, 0.96), rgba(28, 26, 37, 0.97), rgba(23, 22, 30, 0.98), rgba(18, 18, 22, 0.99), rgb(13, 14, 15));
+  border: 1px solid #383E4C;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 40px;
 }
-.decoration::before,
-.decoration::after {
-  content: '-';
-  padding: 5px;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-top: 100px;
-  &_icon {
-    display: flex;
-    align-items: center;
+
+.nav {
+  height: 70px;
+  width: 50%;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  justify-content: space-around;
+  align-content: center;
+  background-image: linear-gradient(to bottom, rgb(161, 161, 161), rgba(134, 133, 136, 0.99), rgba(107, 105, 111, 0.98), rgba(79, 78, 86, 0.96), rgba(52, 50, 61, 0.95), rgba(25, 22, 36, 0.94), rgba(23, 21, 33, 0.95), rgba(21, 19, 29, 0.96), rgba(19, 18, 26, 0.97), rgba(17, 17, 22, 0.98), rgba(15, 15, 19, 0.99), rgb(13, 14, 15));
+  border-radius: 10px;
+  border: 1px solid #000;
+  opacity: 0.9;
+
+  &-search {
+    display: grid;
     justify-content: center;
+    align-content: center;
     position: relative;
-    top: 100px;
-    border: 1px solid #bebebe;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    .icon {
-      max-height: 100px;
+
+    &__input {
+      border-radius: 50px;
+      padding: 5px 20px;
+        &::placeholder {
+          color: #fff;
+      }
     }
-  }
-  &_content {
-    width: 80%;
-    background-color: #fff;
-    border-radius: 6px;
-    max-width: 450px;
-    min-height: 600px;
-    padding-top: 120px;
-    text-align: center;
-  }
-  &__account {
-    border-bottom: 1px solid #bebebe;
-    width: 90%;
-    margin: 0 auto;
-    
-  }
-  &-label {
-    color: rgb(133, 133, 134);
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: left;
-    display: inline-block;
-    align-self: flex-start;
-    padding-left: 68px;
-  }
-  &-input {
-    width: 70%;
-    padding: 10px 10px;
-    font-size: 16px;
-    border: none;
-    border: solid 1px #ccc;
-    border-radius: 3px;
-  }
-  &-forgot {
-    margin: 15px auto 30px;
-    font-size: 12px;
-    position: relative;
-    right: -110px;
-    text-decoration: underline;
-    color: #bebebe;
-    font-weight: bold;
+
+    &__icon {
+      width: 15px;
+      height: 15px;
+      background-image: url('https://image.flaticon.com/icons/svg/1296/1296902.svg');
+      background-size: cover;
+      position: absolute;
+      right: 70px;
+      top: 30px;
+    }
 
   }
-}
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  &-bar {
+    &-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+      list-style: none;
+    }
+  }
 }

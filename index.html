@@ -9,29 +9,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="form">
-    <div class="form_icon">
-      <img class="icon" src="https://image.flaticon.com/icons/svg/74/74472.svg" alt="UserIcon">
+  <nav class="nav">
+    <div class="nav-search">
+      <input type="search" class="nav-search__input" placeholder="Search">
+      <div class="nav-search__icon"></div>
     </div>
-    <div class="form_close">
-      <button class="btn-close" type="reset"></button>
+    <div class="nav-bar">
+      <ul class="nav-bar-wrap">
+        <li class="nav-bar__item"><button class="nav-bar__btn btn">Home</button></li>
+        <li class="nav-bar__item"><button class="nav-bar__btn btn">About</button></li>
+        <li class="nav-bar__item"><button class="nav-bar__btn btn">Blog</button></li>
+        <li class="nav-bar__item"><button class="nav-bar__btn btn">Contact</button></li>
+      </ul>
     </div>
-    <div class="form_content">
-      <button class="btn btn-fb" type="reset">Connect with your facebook account</button>
-      <p class="decoration">or</p>
-      <div class="form__account">
-        <button class="btn btn-acc" type="reset">I'm new here</button>
-        <button class="btn btn-acc" type="reset">I have an account</button>
-      </div>
-      <form action="#" method="POST">
-        <label class="form-label" for="email">Email address:</label>
-        <input class="form-input" type="email" placeholder="ivanka.horst@gmail.com">
-        <label class="form-label" for="password">Password:</label>
-        <input class="form-input" type="password" placeholder="**********">
-        <a href="#" class="form-forgot">Forgot password?</a>
-        <button class="btn btn-login" type="reset">Login</button>
-      </form>
-    </div>
-  </div>
+  </nav>
 </body>
 </html>
