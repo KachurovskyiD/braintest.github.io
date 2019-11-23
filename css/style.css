@@ -6,60 +6,101 @@
   font-family: 'Heebo', sans-serif;
   outline: none;
   text-decoration: none;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 body {
-  background: url('http://leadconsultoria.com/wp-content/uploads/2017/08/bg-gray.jpg') no-repeat;
-  background-size: cover;
-  color: #fff;
+  font-size: 13px;
 }
-.btn,
-input {
-  min-width: 130px;
-  background-image: linear-gradient(to top, #3f404d, rgba(59, 59, 73, 0.99), rgba(55, 54, 70, 0.98), rgba(51, 48, 66, 0.96), rgba(47, 43, 63, 0.95), rgba(43, 38, 59, 0.94), rgba(38, 34, 52, 0.95), rgba(33, 30, 44, 0.96), rgba(28, 26, 37, 0.97), rgba(23, 22, 30, 0.98), rgba(18, 18, 22, 0.99), #0d0e0f);
-  border: 1px solid #383E4C;
-  border-radius: 5px;
-  color: #fff;
-  padding: 10px 40px;
-}
-.nav {
-  height: 70px;
-  width: 50%;
-  margin: 100px auto;
+.answer {
+  margin: 200px auto;
+  width: 727px;
+  height: 336px;
   display: grid;
-  grid-template-columns: 2fr 4fr;
-  justify-content: space-around;
-  align-content: center;
-  background-image: linear-gradient(to bottom, #a1a1a1, rgba(134, 133, 136, 0.99), rgba(107, 105, 111, 0.98), rgba(79, 78, 86, 0.96), rgba(52, 50, 61, 0.95), rgba(25, 22, 36, 0.94), rgba(23, 21, 33, 0.95), rgba(21, 19, 29, 0.96), rgba(19, 18, 26, 0.97), rgba(17, 17, 22, 0.98), rgba(15, 15, 19, 0.99), #0d0e0f);
-  border-radius: 10px;
-  border: 1px solid #000;
-  opacity: 0.9;
+  grid-template-columns: 1fr 10fr;
 }
-.nav-search {
-  display: grid;
-  justify-content: center;
-  align-content: center;
+.answer-count {
+  padding-top: 30px;
+}
+.answer-count__num {
   position: relative;
+  display: block;
+  padding-left: 12px;
+  font-size: 21px;
+  color: #6a737c;
 }
-.nav-search__input {
-  border-radius: 50px;
-  padding: 5px 20px;
-}
-.nav-search__input::placeholder {
-  color: #fff;
-}
-.nav-search__icon {
-  width: 15px;
-  height: 15px;
-  background-image: url('https://image.flaticon.com/icons/svg/1296/1296902.svg');
-  background-size: cover;
+.answer-count__num::before {
+  content: '';
   position: absolute;
-  right: 70px;
-  top: 30px;
+  top: -31px;
+  left: 13px;
+  height: 30px;
+  width: 30px;
+  background-image: url('https://image.flaticon.com/icons/svg/32/32323.svg');
+  background-size: cover;
 }
-.nav-bar-wrap {
+.answer-count__num::after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 13px;
+  height: 30px;
+  width: 30px;
+  background-image: url('https://image.flaticon.com/icons/svg/32/32195.svg');
+  background-size: cover;
+}
+.answer-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr 3fr 2fr 2fr 1fr;
+  grid-row-gap: 10px;
 }
-.nav-bar__item {
-  list-style: none;
+.answer-content .code {
+  margin-top: -10px;
+  background-color: #eff0f1;
+  border-radius: 5px;
+  letter-spacing: 0.7px;
+}
+.answer-content .code-blue {
+  color: #101094;
+}
+.answer-content .code-red {
+  color: #7D2727;
+}
+.answer-content .info-wrap {
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr 1fr;
+  grid-column-gap: 45px;
+  border-bottom: 1px solid #cecece;
+}
+.answer-content .info-wrap .share {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  color: #6a737c;
+}
+.answer-content .info-wrap .edit {
+  justify-self: end;
+  color: #5b5bfa;
+}
+.answer-content .info-wrap .about-1 {
+  color: #6a737c;
+}
+.answer-content .info-wrap .about-2 {
+  color: #5b5bfa;
+}
+.answer-content .sub-answer {
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  border-bottom: 1px solid #cecece;
+}
+.answer-content .sub-answer__num {
+  color: #6a737c;
+}
+.answer-content .sub-answer__content {
+  line-height: 17px;
+}
+.answer-content .sub-answer__content-time {
+  color: #6a737c;
+}
+.answer-content .comment {
+  border-bottom: 1px solid #cecece;
+  color: #6a737c;
 }

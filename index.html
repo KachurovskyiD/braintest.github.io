@@ -4,24 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login form</title>
-  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+  <title>StackAsk</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-search">
-      <input type="search" class="nav-search__input" placeholder="Search">
-      <div class="nav-search__icon"></div>
+  <section class="answer">
+    <div class="answer-count">
+      <span class="answer-count__num">270</span>
     </div>
-    <div class="nav-bar">
-      <ul class="nav-bar-wrap">
-        <li class="nav-bar__item"><button class="nav-bar__btn btn">Home</button></li>
-        <li class="nav-bar__item"><button class="nav-bar__btn btn">About</button></li>
-        <li class="nav-bar__item"><button class="nav-bar__btn btn">Blog</button></li>
-        <li class="nav-bar__item"><button class="nav-bar__btn btn">Contact</button></li>
-      </ul>
+    <div class="answer-content">
+      <div class="task">You may also want to style textareas:</div>
+      <code class="code">
+        <pre><span class="code-blue">   input</span>::-webkit-input-placeholder, <span class="code-blue">textarea</span>::-webkit-input-placeholder { 
+      <span class="code-blue">color</span>: <span class="code-red">#636363</span>; 
+    } 
+   <span class="code-blue">input</span>:-moz-placeholder, <span class="code-blue">textarea</span>:-moz-placeholder { 
+      <span class="code-blue">color</span>: <span class="code-red">#636363</span>; 
+   } </pre>
+       </code>
+       <div class="info-wrap">
+         <div class="share">
+           <div class="share-1">share</div>
+           <div class="share-2">improve this answer</div>
+         </div>
+         <div class="edit">edited Jul 23 '13 at 20:45</div>
+         <div class="about">
+           <div class="about-1">community wiki</div>
+           <div class="about-2">7 revs, 7 users 56% Matt</div>
+         </div>
+       </div>
+       <div class="sub-answer">
+         <div class="sub-answer__num">2</div>
+         <div class="sub-answer__content">on printing in chrome doesn't work... any help @media print { input[type=text].form-control::-webkit-input-placeholder,
+        input[type=textarea].form-control::-webkit-input-placeholder { color: #FFFFFF; } } – <a href="#">Mahdi Alkhatib</a><span class="sub-answer__content-time"> Nov 11 '15 at 19:07</span></div>
+       </div>
+       <div class="comment">add a comment</div>
     </div>
-  </nav>
+
+
+  </section>
+  
 </body>
 </html>
