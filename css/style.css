@@ -3,23 +3,26 @@
 *:active,
 *:visited {
   box-sizing: border-box;
-  font-family: 'Heebo', sans-serif;
   outline: none;
   text-decoration: none;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 body {
   font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 .answer {
-  margin: 200px auto;
   width: 727px;
   height: 336px;
-  display: grid;
-  grid-template-columns: 1fr 10fr;
+  display: flex;
 }
 .answer-count {
   padding-top: 30px;
+  margin-right: 15px;
 }
 .answer-count__num {
   position: relative;
@@ -49,9 +52,13 @@ body {
   background-size: cover;
 }
 .answer-content {
-  display: grid;
-  grid-auto-rows: 1fr 3fr 2fr 2fr 1fr;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.answer-content .task {
+  font-size: 15px;
+  padding-bottom: 20px;
 }
 .answer-content .code {
   margin-top: -10px;
@@ -59,17 +66,21 @@ body {
   border-radius: 5px;
   letter-spacing: 0.7px;
 }
+.answer-content .code pre {
+  font-family: Consolas, Menlo, Monaco, monospace, sans-serif;
+}
 .answer-content .code-blue {
   color: #101094;
+  font-family: Consolas, Menlo, Monaco, monospace, sans-serif;
 }
 .answer-content .code-red {
   color: #7D2727;
 }
 .answer-content .info-wrap {
-  display: grid;
-  grid-template-columns: 3fr 3fr 2fr 1fr;
-  grid-column-gap: 45px;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #cecece;
+  padding: 20px 10px;
 }
 .answer-content .info-wrap .share {
   display: grid;
@@ -77,22 +88,26 @@ body {
   color: #6a737c;
 }
 .answer-content .info-wrap .edit {
-  justify-self: end;
+  justify-self: flex-end;
+  padding-left: 50px;
   color: #5b5bfa;
+  font-size: 12px;
 }
 .answer-content .info-wrap .about-1 {
   color: #6a737c;
 }
 .answer-content .info-wrap .about-2 {
   color: #5b5bfa;
+  padding-right: 70px;
 }
 .answer-content .sub-answer {
-  display: grid;
-  grid-template-columns: 1fr 20fr;
+  display: flex;
   border-bottom: 1px solid #cecece;
+  padding: 5px 0;
 }
 .answer-content .sub-answer__num {
   color: #6a737c;
+  margin-right: 15px;
 }
 .answer-content .sub-answer__content {
   line-height: 17px;
