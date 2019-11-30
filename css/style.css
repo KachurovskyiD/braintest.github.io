@@ -1,121 +1,194 @@
+/*=========================    Fonts    ======================*/
+@import url("font.css");
+/*================    Reboot & Basic settings  ===============*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 *,
-*:focus,
-*:active,
-*:visited {
+*:before,
+*:after,
+*:hover {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  outline: none;
+}
+a:hover,
+a:focus,
+a:visited,
+a:active,
+input:focus {
   text-decoration: none;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+a {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 body {
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 16px;
   width: 100vw;
   height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #646464;
+  background-color: #EBEBEB;
 }
-.answer {
-  width: 727px;
-  height: 336px;
-  display: flex;
-}
-.answer-count {
-  padding-top: 30px;
-  margin-right: 15px;
-}
-.answer-count__num {
-  position: relative;
-  display: block;
-  padding-left: 12px;
-  font-size: 21px;
-  color: #6a737c;
-}
-.answer-count__num::before {
-  content: '';
-  position: absolute;
-  top: -31px;
-  left: 13px;
-  height: 30px;
-  width: 30px;
-  background-image: url('https://image.flaticon.com/icons/svg/32/32323.svg');
-  background-size: cover;
-}
-.answer-count__num::after {
-  content: '';
-  position: absolute;
-  top: 23px;
-  left: 13px;
-  height: 30px;
-  width: 30px;
-  background-image: url('https://image.flaticon.com/icons/svg/32/32195.svg');
-  background-size: cover;
-}
-.answer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.answer-content .task {
-  font-size: 15px;
-  padding-bottom: 20px;
-}
-.answer-content .code {
-  margin-top: -10px;
-  background-color: #eff0f1;
-  border-radius: 5px;
-  letter-spacing: 0.7px;
-}
-.answer-content .code pre {
-  font-family: Consolas, Menlo, Monaco, monospace, sans-serif;
-}
-.answer-content .code-blue {
-  color: #101094;
-  font-family: Consolas, Menlo, Monaco, monospace, sans-serif;
-}
-.answer-content .code-red {
-  color: #7D2727;
-}
-.answer-content .info-wrap {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #cecece;
-  padding: 20px 10px;
-}
-.answer-content .info-wrap .share {
+/*================    Variables    ===============*/
+/*===================    HEADER    ===============*/
+.logo-wrap {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  color: #6a737c;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 65px;
+  background-color: #373737;
+  align-items: center;
 }
-.answer-content .info-wrap .edit {
-  justify-self: flex-end;
-  padding-left: 50px;
-  color: #5b5bfa;
+.logo-wrap__img {
+  grid-column: 2;
+  grid-row: 1;
+}
+.logo-wrap__decor {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #F26C4F;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 68px;
+  transform: rotateZ(45deg);
+}
+.logo-wrap__name {
+  grid-column: 2;
+  grid-row: 1;
+  color: #fff;
+  padding-left: 110px;
+  font-family: 'Nexa', sans-serif;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 69px;
+  background-color: #474747;
+  align-items: center;
+}
+.nav-bar-wrap {
+  grid-column: 2;
+}
+.nav-bar-wrap__item {
+  color: #D8D8D8;
+  font-size: 13px;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.nav-bar-wrap__item span {
+  display: inline-block;
+  min-width: 80px;
+  border-right: 1px solid #767676;
+}
+.nav-bar-wrap__item:hover {
+  border-bottom: 2.5px solid #F26C4F;
+  margin-bottom: -2px;
+}
+/*===================    SUB NAV    ===============*/
+.sub-nav {
+  display: grid;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 60px;
+}
+.sub-nav-content {
+  margin-top: 12px;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+.sub-nav-content .search {
+  position: relative;
+}
+.sub-nav-content .search input {
+  width: 300px;
+  padding: 16px 55px 16px 20px;
+  font-family: 'Arial MT', sans-serif;
+}
+.sub-nav-content .search input::placeholder {
+  color: #B5B5B5;
+}
+.sub-nav-content .search-icon {
+  background-image: url(../img/clock.png);
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  right: 30px;
+  top: 13px;
+}
+.sub-nav-content .social {
+  font-family: 'Times New Roman', serif;
   font-size: 12px;
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-column-gap: 20px;
+  color: #8F8F8F;
 }
-.answer-content .info-wrap .about-1 {
-  color: #6a737c;
-}
-.answer-content .info-wrap .about-2 {
-  color: #5b5bfa;
-  padding-right: 70px;
-}
-.answer-content .sub-answer {
-  display: flex;
-  border-bottom: 1px solid #cecece;
-  padding: 5px 0;
-}
-.answer-content .sub-answer__num {
-  color: #6a737c;
-  margin-right: 15px;
-}
-.answer-content .sub-answer__content {
-  line-height: 17px;
-}
-.answer-content .sub-answer__content-time {
-  color: #6a737c;
-}
-.answer-content .comment {
-  border-bottom: 1px solid #cecece;
-  color: #6a737c;
+.sub-nav-content .social-item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  justify-items: center;
+  align-items: center;
 }
