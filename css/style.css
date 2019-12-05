@@ -138,21 +138,24 @@ body {
 .nav-bar-wrap {
   grid-column: 2;
 }
+.nav-bar-wrap a:last-child {
+  border-right: none;
+}
 .nav-bar-wrap__item {
   color: #D8D8D8;
   font-size: 13px;
   display: inline-block;
   text-align: center;
   min-width: 90px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-}
-.nav-bar-wrap__item span {
-  display: inline-block;
-  min-width: 90px;
   border-right: 1px solid #767676;
 }
-.nav-bar-wrap__item:hover {
+.nav-bar-wrap__item .red {
+  display: inline;
+  min-width: 90px;
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+.nav-bar-wrap__item .red:hover {
   border-bottom: 2.5px solid #F26C4F;
   margin-bottom: -2px;
 }
@@ -602,6 +605,7 @@ body {
 .article-sidebar-block2 .bot-date {
   border-bottom: 2px solid #D9D9D9;
   padding-bottom: 15px;
+  box-shadow: 0 3px 2px -2px #fff;
 }
 .article-sidebar-block3 {
   grid-row: 3;

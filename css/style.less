@@ -179,6 +179,9 @@ body {
 
   &-wrap {
     grid-column: 2;
+    & a:last-child {
+      border-right: none;
+    }
 
     &__item {
       color: #D8D8D8;
@@ -186,23 +189,21 @@ body {
       display: inline-block;
       text-align: center;
       min-width: 90px;
-      padding-top: 26px;
-      padding-bottom: 26px;
-
-      span {
-        display: inline-block;
+      border-right: 1px solid #767676;
+     
+    
+      .red {
+        display: inline;
         min-width: 90px;
-        border-right: 1px solid #767676;
-        // &:last-child {
-        //   border-right: none; 
-        // }
-      }
+        padding-top: 26px;
+        padding-bottom: 24px;
+        &:hover {
+          border-bottom: 2.5px solid @red;
+          margin-bottom: -2px;
 
-      &:hover {
-        border-bottom: 2.5px solid @red;
-        margin-bottom: -2px;
-
+        }
       }
+      
     }
   }
 }
@@ -738,6 +739,7 @@ body {
       .bot-date {
         border-bottom: 2px solid #D9D9D9;
         padding-bottom: 15px;
+        box-shadow: 0 3px 2px -2px #fff;
       }
     }
 
