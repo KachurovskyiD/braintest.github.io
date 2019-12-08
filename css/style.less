@@ -1,0 +1,218 @@
+//=========== basic settings =================//
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #25262C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {            /* wrapper */
+  display: grid;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 300px 300px;
+  position: relative;
+
+  #spin-check {     /* checkbox style*/
+    display: none;
+    transition: 1s;
+
+    &:checked+label::before {
+      opacity: 1;
+      transition: 1s;
+    }
+
+    &:checked+label::after {
+      opacity: 1;
+      transition: 1s;
+    }
+
+    &:checked~div.spin1 {
+      animation: spin1animation 3.5s linear 0.3s infinite;
+    }
+
+    &:checked~div.spin2 {
+      animation: spin2animation 3s linear 0.3s infinite;
+    }
+    &:checked~div.message-disable {
+      opacity: 0;
+    }
+  }
+  .message {
+    grid-column: 2;
+    grid-row: 2;
+    width: 300px;
+    height: 50px;
+    background-color: #AF9B7D;
+    border: 3px solid rgb(102, 80, 48);
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+    top: 50px;
+    left: 120px;
+    position: relative;
+    
+    &-disable {
+      position: relative;
+      z-index: 2;
+      color: rgb(180, 27, 27);
+      opacity: 1;
+      transition: 0.7s;
+   
+    }
+    &-enable {
+      position: relative;
+      z-index: 1;
+      color: rgb(30, 104, 28);
+   
+    }
+
+  }
+
+  .spin-label {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 50px auto;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #AF9B7D;
+    border: 3px solid rgb(102, 80, 48);
+    border-radius: 10px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 14px;
+      width: 3px;
+      background-color: #665030;
+      top: 21px;
+      left: 13px;
+      transform: rotate(-34deg);
+      opacity: 0;
+      transition: 1s;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 31px;
+      width: 3px;
+      background-color: #665030;
+      top: 6px;
+      left: 25px;
+      transform: rotate(37deg);
+      opacity: 0;
+      transition: 1s;
+    }
+
+  }
+
+  .spin1 {            /* first spinner */
+    top: 50px;
+    left: 300px;
+    grid-column: 2;
+    grid-row: 1;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 26px solid #AF9B7D;
+    position: absolute;
+   
+  }
+
+  .spin2 {             /* second spinner */
+    top: 143px;
+    left: 420px;
+    grid-column: 2;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 26px solid #AF9B7D;
+    position: absolute;
+   
+  }
+  .spin__item {        /*style for decoration blocks*/
+    background-color: #AF9B7D;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    border-radius: 2px;
+  }
+
+  .item1 {           /* position of blocks */
+    top: -46px;
+    left: 9px;
+  }
+
+  .item2 {
+    top: 44px;
+    left: 9px;
+  }
+
+  .item3 {
+    top: -39px;
+    left: -50px;
+    transform: rotate(90deg);
+  }
+
+  .item4 {
+    top: -64px;
+    left: 68px;
+    transform: rotate(90deg);
+  }
+
+  .item5 {
+    top: -130px;
+    left: 51px;
+    transform: rotate(45deg);
+  }
+
+  .item6 {
+    top: -155px;
+    left: -33px;
+    transform: rotate(-45deg);
+  }
+
+  .item7 {
+    top: -96px;
+    left: -32px;
+    transform: rotate(45deg);
+  }
+
+  .item8 {
+    top: -123px;
+    left: 51px;
+    transform: rotate(-45deg);
+  }
+}
+
+
+@keyframes spin1animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2animation {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+

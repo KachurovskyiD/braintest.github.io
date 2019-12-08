@@ -1,208 +1,190 @@
-/*=========================    Fonts    ======================*/
-@import url("font.css");
-
-/*================    Reboot & Basic settings  ===============*/
-* {
-  padding: 0;
+body {
   margin: 0;
-  border: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #25262C;
 }
-
-*,
-*:before,
-*:after,
-*:hover {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+* {
   box-sizing: border-box;
 }
-
-a:hover,
-a:focus,
-a:visited,
-a:active,
-input:focus {
-  text-decoration: none;
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button,
-a {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-body {
-  font-size: 16px;
-  width: 100vw;
-  height: 100vh;
-  font-family: 'Arial', sans-serif;
-  color: #9B9B9B;
-  background-color: #fff;
-}
-
-/*================    Style    ===============*/
 .wrapper {
-  margin: 10% auto;
-  width: 320px;
-  background-color: rgb(255, 149, 149);
+  /* wrapper */
+  display: grid;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 300px 300px;
   position: relative;
-  color: #fff;
+}
+.wrapper #spin-check {
+  /* checkbox style*/
+  display: none;
+  transition: 1s;
+}
+.wrapper #spin-check:checked + label::before {
+  opacity: 1;
+  transition: 1s;
+}
+.wrapper #spin-check:checked + label::after {
+  opacity: 1;
+  transition: 1s;
+}
+.wrapper #spin-check:checked ~ div.spin1 {
+  animation: spin1animation 3.5s linear 0.3s infinite;
+}
+.wrapper #spin-check:checked ~ div.spin2 {
+  animation: spin2animation 3s linear 0.3s infinite;
+}
+.wrapper #spin-check:checked ~ div.message-disable {
+  opacity: 0;
+}
+.wrapper .message {
+  grid-column: 2;
+  grid-row: 2;
+  width: 300px;
+  height: 50px;
+  background-color: #AF9B7D;
+  border: 3px solid #665030;
+  border-radius: 10px;
   text-align: center;
-  height: 40px;
-}
-
-#check-menu {
-  display: none;
-}
-
-label {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 2;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 40px;
-}
-
-.burger-line {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  width: 35px;
-  height: 2px;
-  background-color: #fff;
-  transition: 0.5s;
-
-}
-
-.second,
-.third {
-  top: 18px;
-}
-
-.fourth {
-  top: 28px;
-}
-
-.main-menu {
-  display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
-  max-height: 0;
-  font-size: 0;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-a {
   text-transform: uppercase;
+  font-weight: bold;
+  line-height: 50px;
+  top: 50px;
+  left: 120px;
+  position: relative;
+}
+.wrapper .message-disable {
+  position: relative;
+  z-index: 2;
+  color: #b41b1b;
+  opacity: 1;
+  transition: 0.7s;
+}
+.wrapper .message-enable {
+  position: relative;
+  z-index: 1;
+  color: #1e681c;
+}
+.wrapper .spin-label {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 50px auto;
+  position: relative;
   display: block;
-  width: 100%;
-  padding: 10px;
-  color: #fff;
-  border: 1px solid rgb(250, 122, 122);
-  background-color: rgba(250, 122, 122, 0.383);
-  margin-bottom: -1px;
-
+  width: 50px;
+  height: 50px;
+  background-color: #AF9B7D;
+  border: 3px solid #665030;
+  border-radius: 10px;
+  cursor: pointer;
 }
-
-.main-menu a:last-child {
-  border-bottom: 2px solid rgb(250, 122, 122);;
+.wrapper .spin-label::before {
+  position: absolute;
+  content: '';
+  height: 14px;
+  width: 3px;
+  background-color: #665030;
+  top: 21px;
+  left: 13px;
+  transform: rotate(-34deg);
+  opacity: 0;
+  transition: 1s;
 }
-a:hover {
-  background-color: #fff;
-  color: rgb(250, 122, 122);
+.wrapper .spin-label::after {
+  position: absolute;
+  content: '';
+  height: 31px;
+  width: 3px;
+  background-color: #665030;
+  top: 6px;
+  left: 25px;
+  transform: rotate(37deg);
+  opacity: 0;
+  transition: 1s;
 }
-
-
-
-#check-menu:checked~.main-menu {
-  max-height: 400px;
-  font-size: 16px;
-
+.wrapper .spin1 {
+  /* first spinner */
+  top: 50px;
+  left: 300px;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 26px solid #AF9B7D;
+  position: absolute;
 }
-
-#check-menu:checked~.first {
-  display: none;
+.wrapper .spin2 {
+  /* second spinner */
+  top: 143px;
+  left: 420px;
+  grid-column: 2;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 26px solid #AF9B7D;
+  position: absolute;
 }
-
-#check-menu:checked~.second {
+.wrapper .spin__item {
+  /*style for decoration blocks*/
+  background-color: #AF9B7D;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  border-radius: 2px;
+}
+.wrapper .item1 {
+  /* position of blocks */
+  top: -46px;
+  left: 9px;
+}
+.wrapper .item2 {
+  top: 44px;
+  left: 9px;
+}
+.wrapper .item3 {
+  top: -39px;
+  left: -50px;
+  transform: rotate(90deg);
+}
+.wrapper .item4 {
+  top: -64px;
+  left: 68px;
+  transform: rotate(90deg);
+}
+.wrapper .item5 {
+  top: -130px;
+  left: 51px;
   transform: rotate(45deg);
 }
-
-#check-menu:checked~.third {
+.wrapper .item6 {
+  top: -155px;
+  left: -33px;
   transform: rotate(-45deg);
 }
-
-#check-menu:checked~.fourth {
-  display: none;
+.wrapper .item7 {
+  top: -96px;
+  left: -32px;
+  transform: rotate(45deg);
+}
+.wrapper .item8 {
+  top: -123px;
+  left: 51px;
+  transform: rotate(-45deg);
+}
+@keyframes spin1animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2animation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
