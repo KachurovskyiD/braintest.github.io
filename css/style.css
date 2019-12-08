@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 .wrapper #spin-check {
-  /* checkbox style*/
+  /* checkbox style & checked*/
   display: none;
   transition: 1s;
 }
@@ -36,34 +36,6 @@ body {
 }
 .wrapper #spin-check:checked ~ div.message-disable {
   opacity: 0;
-}
-.wrapper .message {
-  grid-column: 2;
-  grid-row: 2;
-  width: 300px;
-  height: 50px;
-  background-color: #AF9B7D;
-  border: 3px solid #665030;
-  border-radius: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 50px;
-  top: 50px;
-  left: 120px;
-  position: relative;
-}
-.wrapper .message-disable {
-  position: relative;
-  z-index: 2;
-  color: #b41b1b;
-  opacity: 1;
-  transition: 0.7s;
-}
-.wrapper .message-enable {
-  position: relative;
-  z-index: 1;
-  color: #1e681c;
 }
 .wrapper .spin-label {
   grid-column: 2;
@@ -101,6 +73,35 @@ body {
   transform: rotate(37deg);
   opacity: 0;
   transition: 1s;
+}
+.wrapper .message {
+  /*message style*/
+  grid-column: 2;
+  grid-row: 2;
+  width: 300px;
+  height: 50px;
+  background-color: #AF9B7D;
+  border: 3px solid #665030;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 50px;
+  top: 50px;
+  left: 120px;
+  position: relative;
+}
+.wrapper .message-disable {
+  position: relative;
+  z-index: 2;
+  color: #b41b1b;
+  opacity: 1;
+  transition: 0.7s;
+}
+.wrapper .message-enable {
+  position: relative;
+  z-index: 1;
+  color: #1e681c;
 }
 .wrapper .spin1 {
   /* first spinner */
@@ -172,6 +173,7 @@ body {
   left: 51px;
   transform: rotate(-45deg);
 }
+/* animation rules */
 @keyframes spin1animation {
   from {
     transform: rotate(0deg);
