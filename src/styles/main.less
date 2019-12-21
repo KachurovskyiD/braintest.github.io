@@ -1,0 +1,177 @@
+//Imports
+@import "reboot.less";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// Styles
+* {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: @mainColor;
+  font-size: 15px;
+}
+@mainColor: #16A086;
+@greyTextColor: #504f4f;
+@whiteTextColor: #FFFFFF;
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+//Header style
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  color: @whiteTextColor;
+  &-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  &-subTitle {
+    opacity: 0.8;
+  }
+}
+//Staff cards style
+.content {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+
+  .staff {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    grid-template-rows: auto;
+    justify-content: space-between;
+
+    .staff-card {
+      width: 220px;
+      height: 430px;
+      background-color: #fff;
+      color: @greyTextColor;
+      position: relative;
+    
+      &__info {
+        text-align: center;
+        line-height: 20px;
+        .staff-name {
+          margin-top: 20px;
+          font-size: 20px;
+        }
+
+        .staff-role {
+          font-size: 14px;
+          font-style: italic;
+          margin-bottom: 20px;
+          margin-top: 3px;
+        }
+
+        .staff-about {
+          text-align: left;
+          margin-left: 10px;
+        }
+      }
+      &__overlay {
+        width: 220px;
+        height: 228px;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        &:hover>.staff-card__social {
+          opacity: 0.85;
+        }
+      }
+      &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 94px;
+        left: 20px;
+        height: 45px;
+        width: 180px;
+        background-color: #16A086;
+        opacity: 0;
+        transition: 0.5s;
+        .social-item {
+          cursor: pointer;
+          &:hover {
+            animation: tada 0.7s ease 0.1s 1;
+            animation-direction: alternate;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+//Animation @keyframes
+@keyframes tada {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+//@media query
+@media screen and (min-width:468px) and (max-width:768px) {
+  .content {
+    grid-template-columns: 1fr 5fr 1fr;
+    .staff {
+      grid-template-columns: 1fr 220px 1fr 220px 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+     .card-1 {
+       grid-column: 2;
+     }
+     .card-2 {
+      grid-column: 4;
+     }
+     .card-3 {
+       grid-row: 2;
+       grid-column: 3;
+       
+     }
+    }
+  }
+}
+@media screen and (max-width:470px) {
+  .content {
+    grid-template-columns: 1fr 220px 1fr;
+
+    .staff {
+      grid-template-columns: 1fr 220px 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      &-card {
+        margin-bottom: 25px;
+      }
+      .card-1 {
+        grid-row: 1;
+        grid-column: 2;
+      }
+
+      .card-2 {
+        grid-row: 2;
+        grid-column: 2;
+      }
+
+      .card-3 {
+        grid-row: 3;
+        grid-column: 2;
+
+      }
+    }
+  }
+}
