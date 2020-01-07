@@ -15,7 +15,7 @@ function createSyncWithBrowser(cb) {
 function compileLess(cb) {
   return src("src/styles/main.less")
     .pipe(less())
-    .pipe(dest("./dist"))
+    .pipe(dest("./dist/styles"))
     .pipe(browserSync.stream());
 }
 
