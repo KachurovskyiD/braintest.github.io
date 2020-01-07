@@ -579,7 +579,7 @@ h6 {
     background: url('../images/footer-bg.jpg');
     background-size: cover;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
   }
   .footer-content {
     grid-template-columns: 370px;
@@ -688,7 +688,7 @@ h6 {
     background: url('../images/footer-bg.jpg');
     background-size: cover;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
   }
   .footer-content {
     grid-template-columns: 370px;
