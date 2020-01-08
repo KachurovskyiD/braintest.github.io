@@ -291,12 +291,14 @@ h6 {
 .footer {
   display: grid;
   grid-template-columns: 1fr 1175px 1fr;
+  grid-auto-rows: 5fr 1fr;
   background: url('../images/footer-bg.jpg');
   background-size: cover;
   width: 100vw;
   height: 461px;
 }
 .footer-content {
+  grid-row: 1;
   grid-column: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -371,6 +373,7 @@ h6 {
   padding-bottom: 10px;
 }
 .footer-rights {
+  grid-row: 2;
   grid-column: 2;
   color: #BFBFBF;
   display: flex;
@@ -412,7 +415,6 @@ h6 {
   width: 25px;
   height: 5px;
   background-color: #AAAAAA;
-  transition: 0.5s;
 }
 .wrapper-burger .second {
   top: 21px;
@@ -430,7 +432,7 @@ h6 {
   max-height: 0;
   font-size: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: max-height 0.5s 0.1s ease;
 }
 .wrapper-burger .burger-nav__item {
   display: block;
@@ -494,7 +496,8 @@ h6 {
     align-items: center;
     background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
+    background-repeat: repeat-y;
+    width: 100%;
     height: 100%;
   }
   .footer-content {
@@ -505,7 +508,7 @@ h6 {
   }
   .footer-rights {
     width: 100%;
-    height: 50px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 468px) and (max-width: 768px) {
@@ -556,7 +559,7 @@ h6 {
   .works-title {
     display: block;
     width: 200px;
-    margin: 30px auto;
+    margin: 30px auto 60px auto;
     text-align: center;
   }
   .works-items {
@@ -576,10 +579,11 @@ h6 {
     grid-template-columns: 1fr 5fr 1fr;
     justify-items: center;
     align-items: center;
-    background: #1E1E1E;
+    background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100%;
   }
   .footer-content {
     grid-template-columns: 370px;
@@ -590,7 +594,7 @@ h6 {
   }
   .footer-rights {
     width: 100%;
-    height: 50px;
+    height: 100%;
   }
 }
 @media screen and (max-width: 468px) {
@@ -685,10 +689,11 @@ h6 {
     grid-template-columns: 1fr 5fr 1fr;
     justify-items: center;
     align-items: center;
-    background: #1E1E1E;
+    background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100%;
   }
   .footer-content {
     grid-template-columns: 370px;
@@ -698,6 +703,6 @@ h6 {
   }
   .footer-rights {
     width: 100%;
-    height: 50px;
+    height: 100%;
   }
 }

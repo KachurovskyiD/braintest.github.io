@@ -260,6 +260,7 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1175px 1fr;
+  grid-auto-rows: 5fr 1fr;
   background: url('../images/footer-bg.jpg');
   background-size: cover;
   width: 100vw;
@@ -280,6 +281,7 @@
       font-size: 13.5px;
     }
 
+    grid-row: 1;
     grid-column: 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -371,6 +373,7 @@
   }
 
   &-rights {
+    grid-row: 2;
     grid-column: 2;
     color: #BFBFBF;
     display: flex;
@@ -421,8 +424,6 @@
     width: 25px;
     height: 5px;
     background-color: #AAAAAA;
-    transition: 0.5s;
-
   }
 
   .second {
@@ -443,7 +444,7 @@
     max-height: 0;
     font-size: 0;
     overflow: hidden;
-    transition: 0.5s;
+    transition: max-height 0.5s 0.1s ease;
 
     &__item {
       text-transform: uppercase;
@@ -527,7 +528,8 @@
     align-items: center;
     background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
+    background-repeat: repeat-y;
+    width: 100%;
     height: 100%;
 
     &-content {
@@ -539,7 +541,7 @@
 
     &-rights {
       width: 100%;
-      height: 50px;
+      height: 100%;
     }
   }
 
@@ -605,7 +607,7 @@
     &-title {
       display: block;
       width: 200px;
-      margin: 30px auto;
+      margin: 30px auto 60px auto;
       text-align: center;
     }
 
@@ -633,10 +635,11 @@
     grid-template-columns: 1fr 5fr 1fr;
     justify-items: center;
     align-items: center;
-    background: #1E1E1E;
+    background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100%;
 
     &-content {
       grid-template-columns: 370px;
@@ -648,7 +651,7 @@
 
     &-rights {
       width: 100%;
-      height: 50px;
+      height: 100%;
     }
   }
 }
@@ -770,10 +773,11 @@
     grid-template-columns: 1fr 5fr 1fr;
     justify-items: center;
     align-items: center;
-    background: #1E1E1E;
+    background: url('../images/footer-bg.jpg');
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100%;
 
     &-content {
       grid-template-columns: 370px;
@@ -784,7 +788,7 @@
 
     &-rights {
       width: 100%;
-      height: 50px;
+      height: 100%;
     }
   }
 }
