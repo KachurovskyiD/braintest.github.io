@@ -38,16 +38,16 @@
 
 //4 - Reverse triangle
 
-// let myString = '',
-//   spaceCount = 4,
-//   snowCount = 1,
-//   space = ' ',
-//   hash = '#';
-// i = 0;
-// while (i < 5) {
-//   myString = space.repeat(spaceCount) + hash.repeat(snowCount);
-//   console.log(myString);
-//   i++;
-//   spaceCount--;
-//   snowCount++;
-// }
+let myString = '',
+  spaceCount = 4,
+  hashCount = 1,
+  space = ' ',
+  hash = '#';
+i = 0;
+while (i < 5) {
+  myString = space.repeat(spaceCount) + hash.repeat(hashCount);
+  console.log(myString);
+  i++;
+  spaceCount--;
+  hashCount++;
+}
