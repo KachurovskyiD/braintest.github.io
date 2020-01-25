@@ -22,11 +22,13 @@
 
 //2 - Factorial of 12
 
-// let res = 1;
-// for (let i = 12; i >= 1; i--) {
-//   res = res * i;
+// let result = 1,
+//   count = 12;
+// while (count >= 1) {
+//   result = result * count;
+//   count--;
 // }
-// console.log(res);
+// console.log(result);
 
 //3 - Triangle
 
@@ -38,16 +40,16 @@
 
 //4 - Reverse triangle
 
-let myString = '',
-  spaceCount = 4,
-  hashCount = 1,
-  space = ' ',
-  hash = '#';
-i = 0;
-while (i < 5) {
-  myString = space.repeat(spaceCount) + hash.repeat(hashCount);
-  console.log(myString);
-  i++;
-  spaceCount--;
-  hashCount++;
-}
+// let myString = '',
+//   spaceCount = 4,
+//   hashCount = 1,
+//   space = ' ',
+//   hash = '#';
+// i = 0;
+// while (i < 5) {
+//   myString = space.repeat(spaceCount) + hash.repeat(hashCount);
+//   console.log(myString);
+//   i++;
+//   spaceCount--;
+//   hashCount++;
+// }
