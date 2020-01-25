@@ -1,14 +1,12 @@
-// Task 1 "ODD or EVEN"
+// Task 1 "ODD or EVEN" (ДОЛГ)
 
-/*
-let number = +prompt('Enter your number', '');
-
-let isNumberEven = (number % 2 === 0) ? `Number ${number} is EVEN!` :
-  Number.isInteger(number) ? `Number ${number} is ODD!` :
-  'It\s not a number';
-
-alert(isNumberEven);
-*/
+// let number = +prompt('Enter your number', '');
+// if (!number) {
+//   alert('You don\'t enter number...');
+// } else {
+//   let isNumberEven = (number % 2 === 0) ? `Number ${number} is EVEN!` : `Number ${number} is ODD!`;
+//   alert(isNumberEven);
+// }
 
 // Task 2 "Ветвление условий"\
 
