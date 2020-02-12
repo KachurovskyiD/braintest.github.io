@@ -19,7 +19,7 @@ const iterCallback = (element) => {
 randomArr.forEach(iterCallback);
 console.log('' + newArr); // массив с +2 к эллементу
 
-let centralElement = Math.ceil(randomRange / 2);
+let centralElement = Math.ceil((newArr.length - 1) / 2);
 console.log(`Центральный эллемент массива : ${centralElement} значение ${newArr[centralElement-1]}`); // центральный эллемент массива
 
 newArr.shift();
@@ -36,7 +36,7 @@ if (newArr.indexOf(0) !== -1) {
 } else {
   console.log('В массиве нет числа 0!');
 } // проверяем наличие 0 в массиве
-
+*/
 
 // 2 - Разворот строки
 /*
@@ -50,7 +50,7 @@ console.log(newArray);
 let array = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 
 let arrayOfStrings = array.split('. ');
-arrayOfStrings[3] = arrayOfStrings[3].toUpperCase();
+arrayOfStrings[arrayOfStrings.length - 1] = arrayOfStrings[arrayOfStrings.length - 1].toUpperCase();
 console.log(arrayOfStrings);
 
 let gatherArrow = arrayOfStrings.join('. \n');
